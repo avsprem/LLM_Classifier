@@ -13,7 +13,7 @@ def get_response(prompt: str, retries: int = 3) -> str:
             # Only use max_output_tokens for OpenRouter
             response = client.chat.completions.create(
                 model=MODEL,
-                max_tokens=20,  
+                max_tokens=25,  
                 messages=[
                     {"role": "system", "content": "Answer only YES or NO."},
                     {"role": "user", "content": prompt},
